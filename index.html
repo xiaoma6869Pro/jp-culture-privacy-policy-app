@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Japanese Culture Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sakura-pink: #FFB3CC;
+            --indigo-blue: #334CAA;
+            --vermillion-red: #E6331A;
+            --bamboo-green: #4CAF50;
+            --gold-accent: #FFD700;
+            --soft-gray: #F5F5F5;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --white: #FFFFFF;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #fff 0%, var(--soft-gray) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--indigo-blue) 100%);
+            border-radius: 24px;
+            color: white;
+            box-shadow: 0 20px 40px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="30" r="1.5" fill="white" opacity="0.1"/><circle cx="30" cy="80" r="1" fill="white" opacity="0.1"/><circle cx="70" cy="70" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px) translateY(-100px); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--gold-accent), var(--vermillion-red));
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Styles */
+        .content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--indigo-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--sakura-pink);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--sakura-pink)20, var(--indigo-blue)10);
+            border-left: 4px solid var(--indigo-blue);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(51, 76, 170, 0.1);
+        }
+
+        .highlight-box p {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-light);
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-list li::before {
+            content: '🌸';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--bamboo-green)15, var(--gold-accent)10);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h3 {
+            color: var(--indigo-blue);
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 10px 15px;
+            background: var(--white);
+            border-radius: 25px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            background: var(--soft-gray);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Smooth Animations */
+        .content, .header, .contact-section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="app-icon">🏮</div>
+            <h1>Japanese Culture Explorer</h1>
+            <p class="subtitle">Privacy Policy - Your Cultural Journey, Your Privacy Protected</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Introduction -->
+            <div class="section">
+                <h2>🌸 Our Privacy Commitment</h2>
+                <div class="highlight-box">
+                    <p><strong>Complete Privacy Protection:</strong> Japanese Culture Explorer is designed as a fully offline educational app. We do not collect, store, or transmit any personal information from our users. Your cultural learning journey remains completely private.</p>
+                </div>
+                <p>Welcome to Japanese Culture Explorer! We are committed to protecting your privacy while providing you with the best cultural learning experience. This privacy policy explains how our offline educational app handles your information as you prepare for your journey to Japan.</p>
+            </div>
+
+            <!-- App Purpose -->
+            <div class="section">
+                <h2>🎋 App Purpose & Mission</h2>
+                <p>Japanese Culture Explorer is designed to help users learn about Japanese culture, traditions, customs, and etiquette before visiting Japan. Our mission is to:</p>
+                <ul class="feature-list">
+                    <li>Provide comprehensive cultural education about Japan</li>
+                    <li>Help travelers understand Japanese customs and traditions</li>
+                    <li>Offer insights into Japanese social etiquette and behavior</li>
+                    <li>Share knowledge about Japanese festivals, food, and lifestyle</li>
+                    <li>Prepare visitors for respectful cultural interactions in Japan</li>
+                    <li>Preserve and share the beauty of Japanese heritage</li>
+                </ul>
+            </div>
+
+            <!-- Data Collection -->
+            <div class="section">
+                <h2>🔒 Information We DO NOT Collect</h2>
+                <p>As a completely offline educational application, Japanese Culture Explorer does not collect any personal information. Specifically, we do not collect:</p>
+                <ul class="feature-list">
+                    <li>Personal identification information (name, email, phone number)</li>
+                    <li>Location data or GPS coordinates</li>
+                    <li>Device identifiers or advertising IDs</li>
+                    <li>Usage analytics or app behavior data</li>
+                    <li>Search history or learning preferences</li>
+                    <li>Photos, contacts, or other device content</li>
+                    <li>Network or internet activity</li>
+                    <li>Any form of user-generated content</li>
+                </ul>
+            </div>
+
+            <!-- Offline Operation -->
+            <div class="section">
+                <h2>📱 Offline Operation</h2>
+                <h3>🌿 Complete Offline Functionality</h3>
+                <p>Japanese Culture Explorer operates entirely offline after download. All cultural content, including:</p>
+                <ul class="feature-list">
+                    <li>Cultural articles and guides</li>
+                    <li>Traditional customs and etiquette information</li>
+                    <li>Festival and seasonal celebration details</li>
+                    <li>Language learning basics</li>
+                    <li>Food culture and dining etiquette</li>
+                    <li>Historical and modern cultural insights</li>
+                </ul>
+                <p>All content is stored locally on your device and does not require internet connectivity to access.</p>
+            </div>
+
+            <!-- Third-Party Services -->
+            <div class="section">
+                <h2>🛡️ Third-Party Services</h2>
+                <p>Japanese Culture Explorer does not integrate with any third-party analytics, advertising, or data collection services. We do not use:</p>
+                <ul class="feature-list">
+                    <li>Google Analytics or similar tracking services</li>
+                    <li>Social media integration or sharing features</li>
+                    <li>Advertising networks or marketing platforms</li>
+                    <li>Cloud storage or backup services</li>
+                    <li>Push notification services</li>
+                    <li>Crash reporting or diagnostic tools</li>
+                </ul>
+            </div>
+
+            <!-- App Permissions -->
+            <div class="section">
+                <h2>⚡ App Permissions</h2>
+                <p>Japanese Culture Explorer requires minimal device permissions to function:</p>
+                <ul class="feature-list">
+                    <li><strong>Storage:</strong> Only to save cultural content locally on your device</li>
+                    <li><strong>No Network Access:</strong> The app does not request internet permissions</li>
+                    <li><strong>No Camera/Microphone:</strong> We do not access device cameras or microphones</li>
+                    <li><strong>No Location:</strong> We do not track or access your location</li>
+                    <li><strong>No Contacts:</strong> We do not access your contact list</li>
+                </ul>
+            </div>
+
+            <!-- Data Security -->
+            <div class="section">
+                <h2>🔐 Data Security</h2>
+                <h3>🏛️ Local Storage Security</h3>
+                <p>Since all app data is stored locally on your device, your information security depends on your device's security settings. We recommend:</p>
+                <ul class="feature-list">
+                    <li>Keeping your device operating system updated</li>
+                    <li>Using device lock screens and encryption</li>
+                    <li>Being cautious about installing apps from unknown sources</li>
+                    <li>Regularly backing up your device securely</li>
+                </ul>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div class="section">
+                <h2>👨‍👩‍👧‍👦 Children's Privacy</h2>
+                <p>Japanese Culture Explorer is suitable for users of all ages interested in learning about Japanese culture. Since we do not collect any personal information, there are no special privacy considerations for children. However, we encourage parents to:</p>
+                <ul class="feature-list">
+                    <li>Review the cultural content to ensure age-appropriateness</li>
+                    <li>Use the app as a family learning experience</li>
+                    <li>Supervise young children's device usage</li>
+                    <li>Discuss Japanese cultural values and respect</li>
+                </ul>
+            </div>
+
+            <!-- Changes to Privacy Policy -->
+            <div class="section">
+                <h2>📝 Changes to This Privacy Policy</h2>
+                <p>We may update this privacy policy from time to time to reflect changes in our practices or for legal requirements. Any changes will be reflected in app updates. Since we do not collect contact information, we cannot notify users directly of changes. We encourage you to review this policy periodically.</p>
+                <div class="highlight-box">
+                    <p><strong>Commitment:</strong> Any future updates will maintain our core principle of not collecting personal user information.</p>
+                </div>
+            </div>
+
+            <!-- Cultural Respect -->
+            <div class="section">
+                <h2>🙏 Cultural Respect & Responsibility</h2>
+                <p>As you use Japanese Culture Explorer to learn about Japan, we encourage you to:</p>
+                <ul class="feature-list">
+                    <li>Approach Japanese culture with respect and open-mindedness</li>
+                    <li>Use the knowledge gained to be a respectful visitor to Japan</li>
+                    <li>Share cultural appreciation in a responsible manner</li>
+                    <li>Continue learning about Japanese culture beyond our app</li>
+                    <li>Respect local customs and traditions during your visit</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>🌸 Contact Us</h3>
+            <p>If you have any questions about this privacy policy or Japanese Culture Explorer, please contact us:</p>
+            <div class="contact-info">
+                <a href="mailto:japanesecultureapp@support.com" class="contact-item">
+                    📧 japanesecultureapp@support.com
+                </a>
+                <div class="contact-item">
+                    🏢 Cultural Education Team
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Japanese Culture Explorer</strong> - Connecting Cultures, Respecting Traditions</p>
+            <p>Preparing you for a meaningful journey to Japan 🇯🇵</p>
+            
+            <div class="last-updated">
+                <strong>Last Updated:</strong> December 2024<br>
+                <strong>Version:</strong> 1.0 - Cultural Edition
+            </div>
+        </div>
+    </div>
+</body>
+</html>
