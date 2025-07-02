@@ -1,0 +1,1 @@
+# jp-culture-privacy-policy-app
